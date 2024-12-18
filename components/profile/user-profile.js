@@ -1,14 +1,14 @@
-import { toast } from 'react-toastify';
-import ProfileForm from './profile-form';
-import classes from './user-profile.module.css';
+import { toast } from "react-toastify";
+import ProfileForm from "./profile-form";
+import classes from "./user-profile.module.css";
 
 function UserProfile() {
   async function changePasswordHandler(passwordData) {
-    const response = await fetch('/api/user/change-password', {
-      method: 'PATCH',
+    const response = await fetch("/api/user/change-password", {
+      method: "PATCH",
       body: JSON.stringify(passwordData),
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
     });
 

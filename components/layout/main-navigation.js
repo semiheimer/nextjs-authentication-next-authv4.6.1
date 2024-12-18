@@ -15,11 +15,11 @@ function MainNavigation() {
     router.push('/');
   };
   return (
-    <header className={classes.header}>
+    (<header className={classes.header}>
       <Link href='/'>
-        <a>
-          <div className={classes.logo}>Next Auth</div>
-        </a>
+
+        <div className={classes.logo}>Next Auth</div>
+
       </Link>
       <nav>
         <ul>
@@ -28,7 +28,7 @@ function MainNavigation() {
           <li>{session && <button onClick={logoutHandler}>Logout</button>}</li>
         </ul>
       </nav>
-    </header>
+    </header>)
   );
 }
 
